@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pipeline:
+    build: .
+    env_file:
+      - .env
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=ap-northeast-1
